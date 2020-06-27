@@ -2,12 +2,18 @@ import React from "react";
 import Person from "./Person";
 class App extends React.Component {
   render() {
+    this.state = {
+      list: [
+        { id: 1, name: "ahmed", age: 27, belt: "black" },
+        { id: 2, name: "ali", age: 30, belt: "green" },
+        { id: 3, name: "mohamed", age: 20, belt: "yellow" },
+      ],
+    };
     return (
       <div className="App">
         <h1>React App</h1>
         <p>Welcome :)</p>
-        <Person name="Ahmed" age="27" belt="black" />
-        <Person name="Mohamed" age="20" belt="black" />
+        <Person personsList={this.state.list} />
       </div>
     );
   }

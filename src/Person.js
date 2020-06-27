@@ -2,14 +2,17 @@ import React from "react";
 
 class Person extends React.Component {
   render() {
-    const { name, age, belt } = this.props;
-    return (
-      <div className="person">
-        <h3>Name: {name}</h3>
-        <h3>Age: {age}</h3>
-        <h3>Belt: {belt}</h3>
-      </div>
-    );
+    const { personsList } = this.props;
+    const getList = personsList.map((person) => {
+      return (
+        <div className="person" key={person.id}>
+          <h3>Name: {person.name}</h3>
+          <h3>Age: {person.age}</h3>
+          <h3>Belt: {person.belt}</h3>
+        </div>
+      );
+    });
+    return <div>{getList}</div>;
   }
 }
 
