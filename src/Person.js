@@ -1,4 +1,5 @@
 import React from "react";
+import "./Person.css";
 // ui component
 const Person = ({ personsList, deletePerson }) => {
   const getList = personsList.map((person) => {
