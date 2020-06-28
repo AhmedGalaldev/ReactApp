@@ -17,12 +17,24 @@ class App extends React.Component {
       list: personsList,
     });
   };
+  deletePerson = (id) => {
+    let personsList = this.state.list.filter((per) => {
+      return per.id !== id;
+    });
+
+    this.setState({
+      list: personsList,
+    });
+  };
   render() {
     return (
       <div className="App">
         <h1>React App</h1>
         <p>Welcome :)</p>
-        <Person personsList={this.state.list} />
+        <Person
+          deletePerson={this.deletePerson}
+          personsList={this.state.list}
+        />
         <AddPerson addPerson={this.addPerson} />
       </div>
     );
