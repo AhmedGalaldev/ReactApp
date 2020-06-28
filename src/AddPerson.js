@@ -13,8 +13,9 @@ class AddPerson extends Component {
   };
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    this.props.addPerson(this.state);
   };
+
   render() {
     return (
       <div>
