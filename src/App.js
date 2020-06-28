@@ -1,5 +1,6 @@
 import React from "react";
 import Person from "./Person";
+// container component
 class App extends React.Component {
   render() {
     this.state = {
