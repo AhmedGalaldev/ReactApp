@@ -26,6 +26,14 @@ class App extends React.Component {
       list: personsList,
     });
   };
+
+  componentDidMount() {
+    console.log("component mounted");
+  }
+  componentDidUpdate(prevState, afterState) {
+    console.log("updated");
+    console.log(prevState, afterState);
+  }
   render() {
     return (
       <div className="App">
